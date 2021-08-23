@@ -1,7 +1,33 @@
 package ar.edu.unahur.obj2.vendedores
 
-class Certificacion(val esDeProducto: Boolean, val puntaje: Int)
 
+import ar.edu.unahur.obj2.locaciones.Ciudad
+import ar.edu.unahur.obj2.locaciones.Provincia
+import ar.edu.unahur.obj2.objetosAuxiliares.Certificado
+
+abstract class Vendedor{
+  val certificaciones = mutableListOf<Certificado>()
+
+  // abstract fun puedeTrabajarEn(ciudad: Ciudad): Boolean
+  /*
+  fun esVersatil() =
+    certificaciones.size >= 3
+            && this.certificacionesDeProducto() >= 1
+            && this.otrasCertificaciones() >= 1
+
+  */
+}
+
+
+
+
+
+
+
+
+
+
+/*
 abstract class Vendedor {
   // Acá es obligatorio poner el tipo de la lista, porque como está vacía no lo puede inferir.
   // Además, a una MutableList se le pueden agregar elementos
@@ -49,3 +75,4 @@ class ComercioCorresponsal(val ciudades: List<Ciudad>) : Vendedor() {
     return ciudades.contains(ciudad)
   }
 }
+*/
