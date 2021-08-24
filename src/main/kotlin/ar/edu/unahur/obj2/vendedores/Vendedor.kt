@@ -11,5 +11,7 @@ abstract class Vendedor{
     certificaciones.size >= 3
           && certificaciones.any { it.esDeProducto }
           && certificaciones.any { !it.esDeProducto }
-  fun esFirme(): Boolean = certificaciones.sumOf { it.puntaje } >= 30
+  fun esFirme(): Boolean = this.puntaje() >= 30
+  fun puntaje(): Int = certificaciones.sumOf { it.puntaje }
+  fun esGenerico(): Boolean = certificaciones.any { !it.esDeProducto }
 }

@@ -1,5 +1,7 @@
 package ar.edu.unahur.obj2.vendedores
 
+import ar.edu.unahur.obj2.locaciones.Ciudad
+import ar.edu.unahur.obj2.locaciones.Provincia
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.booleans.shouldBeTrue
@@ -10,7 +12,7 @@ class VendedorTest : DescribeSpec({
 
   describe("Vendedor fijo") {
     val obera = Ciudad(misiones)
-    val vendedorFijo = VendedorFijo(obera)
+    val vendedorFijo = Fijo(obera)
 
     describe("puedeTrabajarEn") {
       it("su ciudad de origen") {
